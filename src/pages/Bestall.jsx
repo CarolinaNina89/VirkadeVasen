@@ -2,6 +2,7 @@ import React from "react";
 import Heading from "../components/Heading";
 import Footer from "../components/Footer";
 import availableColors from "../availableColors";
+import logo from "../../public/assets/logga.png";
 
 // Loops through all colors and puts a , between them
 const [yarn, eyes] = availableColors;
@@ -46,7 +47,7 @@ function Bestall() {
           </p>
           <p>Magiska hälsningar, Frida 🪄</p>
         </div>
-        <img id="imgToText" src="/assets/logga.png" alt="logga" />
+        <img id="imgToText" src={logo} alt="logga" />
       </div>
       <Footer />
     </div>

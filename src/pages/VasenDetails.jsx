@@ -10,7 +10,7 @@ function VasenDetails({ vasen, onClick }) {
   return (
     <div className="vasenContentDiv">
       <img
-        src="/assets/window_close.png"
+        src="/VirkadeVasen/assets/window_close.png"
         alt="close window"
         className="imgCloseModal"
         onClick={onClick}
