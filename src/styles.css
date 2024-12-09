@@ -19,7 +19,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: var(--primaryGreen);
-  background-image: url("./assets/backgroundImage.jpg");
+  background-image: url("/assets/backgroundImage.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
