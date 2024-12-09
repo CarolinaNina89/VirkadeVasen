@@ -25,7 +25,10 @@ function Navigation() {
           </Link>
           <div className="socialMedia">
             <a href="https://www.facebook.com/VirkadeVasen" target="_blank">
-              <img src="/VirkadeVasen/assets/facebook.png" />
+              <img
+                src="/VirkadeVasen/assets/facebook.png"
+                alt="facebook_logo"
+              />
             </a>
           </div>
         </div>
