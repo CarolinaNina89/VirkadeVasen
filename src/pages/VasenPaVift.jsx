@@ -1,6 +1,7 @@
 import React from "react";
 import Heading from "../components/Heading";
 import Footer from "../components/Footer";
+import market from "../../public/assets/market.jpg";
 
 function VasenPaVift() {
   return (
@@ -29,7 +30,7 @@ function VasenPaVift() {
           </p>
           <p>Följ oss på Facebook och låt mina väsen förgylla din dag!</p>
         </div>
-        <img id="imgToText" src="/assets/market.jpg" alt="market" />
+        <img id="imgToText" src={market} alt="market" />
       </div>
       <Footer />
     </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import facebook from "../../public/assets/facebook.png";
 
 function Navigation() {
   return (
@@ -25,10 +26,7 @@ function Navigation() {
           </Link>
           <div className="socialMedia">
             <a href="https://www.facebook.com/VirkadeVasen" target="_blank">
-              <img
-                src="/VirkadeVasen/assets/facebook.png"
-                alt="facebook_logo"
-              />
+              <img src={facebook} alt="facebook_logo" />
             </a>
           </div>
         </div>

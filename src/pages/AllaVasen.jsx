@@ -4,6 +4,7 @@ import vasenDetails from "../vasenDetails";
 import Heading from "../components/Heading";
 import Footer from "../components/Footer";
 import VasenDetails from "./VasenDetails";
+import arrow from "../../public/assets/arrow_changeVasen.png";
 
 function AllaVasen() {
   // State to handle the actual väsen and if the modal is open
@@ -54,7 +55,7 @@ function AllaVasen() {
         <div className="modal">
           <img
             className="prevVasen"
-            src="/assets/arrow_changeVasen.png"
+            src={arrow}
             alt="arrow"
             onClick={handlePrev}
           />
@@ -64,7 +65,7 @@ function AllaVasen() {
           </div>
           <img
             className="nextVasen"
-            src="/assets/arrow_changeVasen.png"
+            src={arrow}
             alt="arrow"
             onClick={handleNext}
           />

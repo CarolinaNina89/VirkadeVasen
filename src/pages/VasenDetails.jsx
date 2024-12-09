@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
+import closeModal from "../../public/assets/window_close.png";
 
 function VasenDetails({ vasen, onClick }) {
   if (!vasen) {
@@ -10,7 +11,7 @@ function VasenDetails({ vasen, onClick }) {
   return (
     <div className="vasenContentDiv">
       <img
-        src="/VirkadeVasen/assets/window_close.png"
+        src={closeModal}
         alt="close window"
         className="imgCloseModal"
         onClick={onClick}
