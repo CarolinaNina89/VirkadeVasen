@@ -1,13 +1,14 @@
 import React from "react";
+import krumilörH from "../../public/assets/högerKrumilur3.png";
+import krumilörV from "../../public/assets/vänsterKrumilur3.png";
 
 function Heading({ heading, subheading }) {
   return (
-    // <div className="contentDIV">
     <div className="headingImg">
       <img
         className="imgLine"
         id="leftKrumilur"
-        src="/assets/vänsterKrumilur3.png"
+        src={krumilörV}
         alt="horizontal squiggly line"
       />
       <div className="heading">
@@ -17,11 +18,10 @@ function Heading({ heading, subheading }) {
       <img
         className="imgLine"
         id="rightKrumilur"
-        src="/assets/högerKrumilur3.png"
+        src={krumilörH}
         alt="horizontal squiggly line"
       />
     </div>
-    // </div>
   );
 }
 

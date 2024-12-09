@@ -3,6 +3,11 @@ import Button from "../components/Button";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Heading from "../components/Heading";
+import frans from "../../public/assets/axolotlFrans.jpg";
+import rio from "../../public/assets/enhörningRio.jpg";
+import deadly from "../../public/assets/svampenDeadly.jpg";
+import dragon from "../../public/assets/babyDragon.jpg";
+import spike from "../../public/assets/kattenSpike.jpg";
 
 function Home() {
   return (
@@ -21,23 +26,11 @@ function Home() {
           <Button text="Här hittar du alla mina väsen" />
         </Link>
         <div className="twistedImages">
-          <img
-            id="firstImg"
-            src="/assets/axolotlFrans.jpg"
-            alt="Axolotl Frans"
-          />
-          <img
-            id="secondImg"
-            src="/assets/enhörningRio.jpg"
-            alt="Enhörningen Rio"
-          />
-          <img
-            id="thirdImg"
-            src="/assets/svampenDeadly.jpg"
-            alt="Svampen Deadly"
-          />
-          <img id="fourthImg" src="/assets/babyDragon.jpg" alt="Baby Dragon" />
-          <img id="fifthImg" src="/assets/kattenSpike.jpg" alt="Katten Spike" />
+          <img id="firstImg" src={frans} alt="Axolotl Frans" />
+          <img id="secondImg" src={rio} alt="Enhörningen Rio" />
+          <img id="thirdImg" src={deadly} alt="Svampen Deadly" />
+          <img id="fourthImg" src={dragon} alt="Draken Saga" />
+          <img id="fifthImg" src={spike} alt="Katten Spike" />
         </div>
       </div>
       <Footer />
