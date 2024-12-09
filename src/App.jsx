@@ -10,7 +10,7 @@ import VasenPaVift from "./pages/VasenPaVift";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/VirkadeVasen">
       <Navigation />
       {/* Routing logik */}
       <Routes>
