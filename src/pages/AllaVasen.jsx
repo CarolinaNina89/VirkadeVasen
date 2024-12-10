@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import VasenCard from "../components/VasenCard";
 import vasenDetails from "../vasenDetails";
@@ -18,13 +18,25 @@ function AllaVasen() {
 
   useEffect(() => {
     const idFromUrl = location.pathname.split("/")[2]; // Hämta id från URL
-    if (idFromUrl) {
-      const index = vasenDetails.findIndex((v) => v.id === idFromUrl);
-      if (index !== -1) setCurrentIndex(index);
-    } else {
-      setCurrentIndex(null); // Om inget id i URL, stäng modalen
+    console.log("ID from URL:", idFromUrl);
+
+    if (!idFromUrl) {
+      console.log("No ID in URL yet, skipping effect");
+      return; // Hoppa över om ID inte är definierat
     }
-  }, [location]); // Uppdatera när URL ändras
+
+    const index = vasenDetails.findIndex((v) => v.id === idFromUrl);
+    console.log("Index from vasenDetails:", index);
+
+    if (index !== -1) {
+      setCurrentIndex(index);
+      console.log("Setting Current Index:", index);
+      console.log("Current Väsen Data:", vasenDetails[index]);
+    } else {
+      setCurrentIndex(null);
+      console.log("No valid index found, modal will not render");
+    }
+  }, [location]);
 
   // const handleOpenPopup = (vasenId) => {
   //   const index = vasenDetails.findIndex((v) => v.id === vasenId);
@@ -77,29 +89,47 @@ function AllaVasen() {
         ))}
       </div>
 
-      {/* Popup/modal */}
       {currentVasen && (
-        <div className="modal">
-          <img
-            className="prevVasen"
-            src={arrow}
-            alt="arrow"
-            onClick={handlePrev}
-          />
+        <>
+          {console.log("Modal is rendering")}
           <div className="modal-overlay" onClick={handleClosePopup}></div>
-          <div className="modal-content">
-            <VasenDetailsPage
-              vasen={currentVasen} /*onClick={handleClosePopup}*/
+
+          <div className="modal">
+            <h1>Test Modal</h1>
+            <p>{JSON.stringify(currentVasen)}</p>
+          </div>
+        </>
+      )}
+
+      {/* Popup/modal */}
+      {/* {currentVasen && console.log("Modal is about to render")}
+      {currentVasen && (
+        <>
+          {console.log("Current Väsen:", currentVasen)}
+          <div className="modal-overlay" onClick={handleClosePopup}></div>
+
+          <div className="modal">
+            <img
+              className="prevVasen"
+              src={arrow}
+              alt="arrow"
+              onClick={handlePrev}
+            />
+
+            <div className="modal-content">
+              <VasenDetailsPage
+                vasen={currentVasen}
+              />
+            </div>
+            <img
+              className="nextVasen"
+              src={arrow}
+              alt="arrow"
+              onClick={handleNext}
             />
           </div>
-          <img
-            className="nextVasen"
-            src={arrow}
-            alt="arrow"
-            onClick={handleNext}
-          />
-        </div>
-      )}
+        </>
+      )} */}
       <Footer />
     </div>
   );

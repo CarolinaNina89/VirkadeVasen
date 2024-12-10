@@ -8,7 +8,7 @@ function VasenDetails({ vasen, onClick }) {
   if (!vasen) {
     return <p>Väsen hittades inte!</p>; // Handle wrong ID
   }
-
+  console.log("Vasen received in VasenDetails:", vasen);
   return (
     <div className="vasenContentDiv">
       {/* SEO */}
