@@ -5,6 +5,7 @@ import Heading from "../components/Heading";
 import Footer from "../components/Footer";
 import VasenDetails from "./VasenDetails";
 import arrow from "../../public/assets/arrow_changeVasen.webp";
+import { Helmet } from "react-helmet";
 
 function AllaVasen() {
   // State to handle the actual väsen and if the modal is open
@@ -36,6 +37,14 @@ function AllaVasen() {
 
   return (
     <div className="contentBackground">
+      {/* SEO */}
+      <Helmet>
+        <meta
+          name="description"
+          content="Upptäck hela vårt sortiment av virkade väsen! Utforska alla våra unika och handgjorda skapelser som ger liv till fantasin."
+        />
+        <title>VirkadeVasen - Alla väsen</title>
+      </Helmet>
       <Heading
         heading="Alla väsen"
         subheading="Utforska hela min magiska samling här!"

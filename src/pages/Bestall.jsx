@@ -3,6 +3,7 @@ import Heading from "../components/Heading";
 import Footer from "../components/Footer";
 import availableColors from "../availableColors";
 import logo from "../../public/assets/logga.webp";
+import { Helmet } from "react-helmet";
 
 // Loops through all colors and puts a , between them
 const [yarn, eyes] = availableColors;
@@ -14,6 +15,14 @@ function listColor(item) {
 function Bestall() {
   return (
     <div className="contentBackground">
+      {/* SEO */}
+      <Helmet>
+        <meta
+          name="description"
+          content="Beställ ditt favoritväsen från Virkade Väsen. Utforska sortimentet av handgjorda skapelser och gör din beställning idag!"
+        />
+        <title>VirkadeVasen - Beställ</title>
+      </Helmet>
       <Heading
         heading="Beställ"
         subheading="Sprid glädje och magi med en virkad vän!"

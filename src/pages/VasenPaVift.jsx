@@ -2,10 +2,19 @@ import React from "react";
 import Heading from "../components/Heading";
 import Footer from "../components/Footer";
 import market from "../../public/assets/market.jpg";
+import { Helmet } from "react-helmet";
 
 function VasenPaVift() {
   return (
     <div className="contentBackground">
+      {/* SEO */}
+      <Helmet>
+        <meta
+          name="description"
+          content="Följ med våra virkade väsen på deras äventyr! Här hittar du information om var de kommer att ställas ut nästa gång, inklusive marknader och evenemang."
+        />
+        <title>VirkadeVasen - Väsen på vift</title>
+      </Helmet>
       <Heading
         heading="Väsen på vift"
         subheading="Vart hittar du oss nästa gång?"
