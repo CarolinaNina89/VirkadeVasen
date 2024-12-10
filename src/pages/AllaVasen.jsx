@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import VasenCard from "../components/VasenCard";
 import vasenDetails from "../vasenDetails";
 import Heading from "../components/Heading";
@@ -72,7 +72,7 @@ function AllaVasen() {
             id={vasen.id} // Send ID to VasenCard for routing
             heading={vasen.heading}
             imgURL={vasen.imgURL}
-            onLearnMore={() => handleOpenPopup(vasen.id)} //Opens the popup
+            // onLearnMore={() => handleOpenPopup(vasen.id)} //Opens the popup
           />
         ))}
       </div>
@@ -88,7 +88,9 @@ function AllaVasen() {
           />
           <div className="modal-overlay" onClick={handleClosePopup}></div>
           <div className="modal-content">
-            <VasenDetailsPage vasen={currentVasen} onClick={handleClosePopup} />
+            <VasenDetailsPage
+              vasen={currentVasen} /*onClick={handleClosePopup}*/
+            />
           </div>
           <img
             className="nextVasen"

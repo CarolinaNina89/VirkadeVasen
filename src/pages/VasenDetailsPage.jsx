@@ -1,19 +1,12 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import vasenDetails from "../vasenDetails";
-import VasenDetails from "./VasenDetails";
+import vasenDetails from "../vasenDetails"; // Hämta väsendata
 
-function VasenDetailsPage() {
-  const { id } = useParams(); // Get the id from the URL
-  const vasen = vasenDetails.find((v) => v.id === id);
-
-  if (!vasen) {
-    return <p>Väsen inte funnet.</p>;
-  }
-
+function VasenDetailsPage({ vasen }) {
   return (
     <div>
-      <VasenDetails vasen={vasen} />
+      <h1>{vasen.heading}</h1>
+      <img src={vasen.imgURL} alt={vasen.heading} />
+      <p>{vasen.description}</p>
     </div>
   );
 }
