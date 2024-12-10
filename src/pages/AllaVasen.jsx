@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import VasenCard from "../components/VasenCard";
 import vasenDetails from "../vasenDetails";
 import Heading from "../components/Heading";
@@ -13,13 +13,27 @@ function AllaVasen() {
   // State to handle the actual väsen and if the modal is open
   const [currentIndex, setCurrentIndex] = useState(null);
 
-  const handleOpenPopup = (vasenId) => {
-    const index = vasenDetails.findIndex((v) => v.id === vasenId);
-    if (index !== -1) setCurrentIndex(index);
-  };
+  const location = useLocation(); // Hämta aktuella URL-parametrar
+  const navigate = useNavigate(); // För att kunna navigera till nya URL:er
+
+  useEffect(() => {
+    const idFromUrl = location.pathname.split("/")[2]; // Hämta id från URL
+    if (idFromUrl) {
+      const index = vasenDetails.findIndex((v) => v.id === idFromUrl);
+      if (index !== -1) setCurrentIndex(index);
+    } else {
+      setCurrentIndex(null); // Om inget id i URL, stäng modalen
+    }
+  }, [location]); // Uppdatera när URL ändras
+
+  // const handleOpenPopup = (vasenId) => {
+  //   const index = vasenDetails.findIndex((v) => v.id === vasenId);
+  //   if (index !== -1) setCurrentIndex(index);
+  // };
 
   const handleClosePopup = () => {
-    setCurrentIndex(null);
+    setCurrentIndex(null); // Stäng popup
+    navigate("/alla-vasen"); // Navigera tillbaka till listan utan id
   };
 
   const handlePrev = () => {
@@ -62,6 +76,8 @@ function AllaVasen() {
           />
         ))}
       </div>
+
+      {/* Popup/modal */}
       {currentVasen && (
         <div className="modal">
           <img
