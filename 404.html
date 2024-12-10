@@ -1,31 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <meta
-      name="description"
-      content="Virkade Väsen - En plats för inspiration och vackra, magiska virkade skapelser!"
-    />
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/assets/logga.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Virkade Väsen</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-    <script type="text/javascript">
-      if (
-        location.pathname !== "/" &&
-        !location.pathname.startsWith("/VirkadeVasen")
-      ) {
-        window.location.replace("/VirkadeVasen" + location.pathname);
-      }
+    <title>Redirecting...</title>
+    <script>
+      // Omdirigera alla förfrågningar till index.html
+      const redirectTo = "/VirkadeVasen/";
+      window.location.replace(`${redirectTo}`);
     </script>
-  </body>
+  </head>
+  <body></body>
 </html>
