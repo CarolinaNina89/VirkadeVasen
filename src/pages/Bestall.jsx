@@ -2,7 +2,7 @@ import React from "react";
 import Heading from "../components/Heading";
 import Footer from "../components/Footer";
 import availableColors from "../availableColors";
-import logo from "../../public/assets/logga.png";
+import logo from "../../public/assets/logga.webp";
 
 // Loops through all colors and puts a , between them
 const [yarn, eyes] = availableColors;

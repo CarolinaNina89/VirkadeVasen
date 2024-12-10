@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
-import closeModal from "../../public/assets/window_close.png";
+import closeModal from "../../public/assets/window_close.webp";
 
 function VasenDetails({ vasen, onClick }) {
   if (!vasen) {

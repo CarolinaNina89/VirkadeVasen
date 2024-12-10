@@ -1,6 +1,6 @@
 import React from "react";
-import krumilörH from "../../public/assets/högerKrumilur3.png";
-import krumilörV from "../../public/assets/vänsterKrumilur3.png";
+import krumilörH from "../../public/assets/högerKrumilur3.webp";
+import krumilörV from "../../public/assets/vänsterKrumilur3.webp";
 
 function Heading({ heading, subheading }) {
   return (

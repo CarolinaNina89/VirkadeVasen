@@ -4,7 +4,7 @@ import vasenDetails from "../vasenDetails";
 import Heading from "../components/Heading";
 import Footer from "../components/Footer";
 import VasenDetails from "./VasenDetails";
-import arrow from "../../public/assets/arrow_changeVasen.png";
+import arrow from "../../public/assets/arrow_changeVasen.webp";
 
 function AllaVasen() {
   // State to handle the actual väsen and if the modal is open
