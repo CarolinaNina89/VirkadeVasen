@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import VasenCard from "../components/VasenCard";
 import vasenDetails from "../vasenDetails";
 import Heading from "../components/Heading";
 import Footer from "../components/Footer";
 import VasenDetails from "./VasenDetails";
+import VasenDetailsPage from "./VasenDetailsPage";
 import arrow from "../../public/assets/arrow_changeVasen.webp";
 import { Helmet } from "react-helmet";
 
@@ -70,7 +72,7 @@ function AllaVasen() {
           />
           <div className="modal-overlay" onClick={handleClosePopup}></div>
           <div className="modal-content">
-            <VasenDetails vasen={currentVasen} onClick={handleClosePopup} />
+            <VasenDetailsPage vasen={currentVasen} onClick={handleClosePopup} />
           </div>
           <img
             className="nextVasen"
