@@ -508,6 +508,8 @@ h6 {
   z-index: 1001;
 }
 
+/* /////////////////////////////////////////// RESPONSIVE DESIGN*/
+
 /* 320px — 480px: Mobile devices */
 @media (max-width: 1250px) {
 }
