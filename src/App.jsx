@@ -1,17 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import "./styles.css";
 import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
 import AllaVasen from "./pages/AllaVasen";
-import VasenDetailsPage from "./pages/VasenDetailsPage";
 import VasenDetails from "./pages/VasenDetails";
 import Bestall from "./pages/Bestall";
 import VasenPaVift from "./pages/VasenPaVift";
 
 function App() {
   return (
-    <Router basename="/VirkadeVasen">
+    <Router>
       <Navigation />
       {/* Routing logik */}
       <Routes>
@@ -19,9 +18,7 @@ function App() {
         <Route path="/alla-vasen" element={<AllaVasen />} />
         <Route path="/bestall" element={<Bestall />} />
         <Route path="/vasen-pa-vift" element={<VasenPaVift />} />
-        {/* <Route path="/vasen/:id" element={<VasenDetails />} /> */}
-        {/* Dynamic rout for each Väsen */}
-        <Route path="/vasen/:id" element={<VasenDetailsPage />} />
+        <Route path="/vasen/:id" element={<VasenDetails />} />
         {/* Dynamisk route */}
       </Routes>
     </Router>

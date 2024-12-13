@@ -2,23 +2,14 @@ import React from "react";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
 import closeModal from "../../public/assets/window_close.webp";
-import { Helmet } from "react-helmet";
 
 function VasenDetails({ vasen, onClick }) {
   if (!vasen) {
     return <p>Väsen hittades inte!</p>; // Handle wrong ID
   }
-  console.log("Vasen received in VasenDetails:", vasen);
+
   return (
     <div className="vasenContentDiv">
-      {/* SEO */}
-      <Helmet>
-        <meta
-          name="description"
-          content="Upptäck alla detaljer om ditt valda väsen! Här hittar du information om material, storlek och design bakom varje unikt virkat väsen."
-        />
-        <title>VirkadeVasen - Väsendetaljer</title>
-      </Helmet>
       <img
         src={closeModal}
         alt="close window"
@@ -28,7 +19,7 @@ function VasenDetails({ vasen, onClick }) {
 
       <div className="vasenPresentationDiv">
         {/* Picture of Väsen */}
-        <img className="imgVasenModal" src={vasen.imgURL} alt="product_img" />
+        <img className="imgVasenModal" src={vasen.imgURL} alt="product image" />
         <div className="headingVasenDetailsDiv">
           <h5>{vasen.heading}</h5>
           <p className="vasenDetailPrice">{vasen.price}</p>
