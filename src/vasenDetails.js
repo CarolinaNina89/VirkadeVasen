@@ -26,6 +26,7 @@ const vasenDetails = [
     extra: "Barnsäkra ögon",
     story:
       "Jag föddes en gnistrande vinternatt, skapad av magiska händer som virkade mig med kärlek. Nu söker jag ett hem där jag kan sprida julglädje, värme och kanske hitta på några bus! ",
+    category: ["Jul"],
   },
   {
     key: "frans",
@@ -43,8 +44,8 @@ const vasenDetails = [
       "Jag är en liten axolotl som föddes ur mjuka maskor och drömmar om havet. Jag har rest från klara bäckar och steniga stränder. Nu hoppas jag få bli din vän och skapa minnen tillsammans.",
   },
   {
-    key: "dragon",
-    id: "dragon",
+    key: "saga",
+    id: "saga",
     heading: "Draken Saga",
     name: "Saga",
     imgURL: babyDragon,
@@ -58,8 +59,8 @@ const vasenDetails = [
       "Jag är en liten drake född ur magiska maskor. Med mjuka fjäll och äventyrslust vill jag sprida värme, glädje och skapa fantastiska sagor tillsammans med dig. Är du redo? ",
   },
   {
-    key: "goblin",
-    id: "goblin",
+    key: "missy",
+    id: "missy",
     heading: "Goblin Missy",
     name: "Missy",
     imgURL: babyGoblin,

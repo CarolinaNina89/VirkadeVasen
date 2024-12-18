@@ -1,9 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Heading from "../components/Heading";
 import Footer from "../components/Footer";
 import availableColors from "../availableColors";
-import logo from "../../public/assets/logga.webp";
-import { Helmet } from "react-helmet";
+import magicalCreature from "../../public/assets/magicalCreature.png";
+
+import Button from "../components/Button";
 
 // Loops through all colors and puts a , between them
 const [yarn, eyes] = availableColors;
@@ -25,16 +28,29 @@ function Bestall() {
       </Helmet>
       <Heading
         heading="Beställ"
-        subheading="Sprid glädje och magi med en virkad vän!"
+        subheading="Så här får du hem ditt magiska väsen!"
       />
-      <div className="imgWithTextLayout">
+      <div className="greenUnique greenBestall">
+        <h6> Kontakta mig enkelt via </h6>
+        <div className="contactButtons">
+          <a
+            className="button"
+            href="https://www.facebook.com/VirkadeVasen"
+            target="_blank"
+          >
+            Facebook Virkade Väsen
+          </a>
+          <p>eller</p>
+          <a
+            className="button"
+            href="mailto:bestall@virkadevasen.se?subject=Ny beställning av Virkat Väsen&body=Hej!%0D%0AVad roligt att du vill beställa ett magiskt väsen!🌟%0D%0A%0D%0AFör att jag ska kunna skapa och skicka ditt väsen behöver jag följande information:%0D%0A%0D%0A- Ditt namn:%0D%0A- Din adress:%0D%0A- Vilket väsen (t.ex. Rio, Elli etc.):%0D%0A- Färger på garn:%0D%0A- Färg på ögon:%0D%0A%0D%0ANär vi har haft kontakt sker betalning enkelt via Swish.%0D%0A%0D%0ATack så mycket, och jag ser fram emot att skapa ditt magiska väsen!%0D%0AFrida"
+          >
+            bestall@virkadevasen.se
+          </a>
+        </div>
+      </div>
+      <div className="textWithImgLayout">
         <div className="longTexts">
-          <p>
-            Beställ enkelt genom att <br />
-            📧 Maila oss på: bestall@virkadevasen.se <br />
-            📱 Kontakta oss via Facebook:
-            <a href="https://www.facebook.com/VirkadeVasen"> Virkade Väsen </a>
-          </p>
           <p>Vill du skapa något unikt?</p>
           <p>
             Jag erbjuder dig möjligheten att specialbeställa ditt väsen!
@@ -56,7 +72,13 @@ function Bestall() {
           </p>
           <p>Magiska hälsningar, Frida 🪄</p>
         </div>
-        <img id="imgToText" src={logo} alt="logga" />
+        <div className="centerImgResponsive">
+          <img
+            id="magicalCreatureImg"
+            src={magicalCreature}
+            alt="Magiskt väsen med stora ögon"
+          />
+        </div>
       </div>
       <Footer />
     </div>

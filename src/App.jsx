@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./styles.css";
 import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
@@ -7,10 +7,12 @@ import AllaVasen from "./pages/AllaVasen";
 import VasenDetails from "./pages/VasenDetails";
 import Bestall from "./pages/Bestall";
 import VasenPaVift from "./pages/VasenPaVift";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/VirkadeVasen/">
+      <ScrollToTop />
       <Navigation />
       {/* Routing logik */}
       <Routes>

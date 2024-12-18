@@ -19,7 +19,7 @@ function VasenPaVift() {
         heading="Väsen på vift"
         subheading="Vart hittar du oss nästa gång?"
       />
-      <div className="imgWithTextLayout">
+      <div className="textWithImgLayout">
         <div className="longTexts">
           <p>Mina virkade väsen älskar att ge sig ut på äventyr! </p>
           <p>
@@ -29,8 +29,11 @@ function VasenPaVift() {
           </p>
           <p>
             För att se vart vi dyker upp härnäst, följ vår Facebooksida
-            <a href="https://www.facebook.com/VirkadeVasen"> Virkade Väsen</a>.
-            Jag uppdaterar löpande med datum, platser och all information du
+            <a href="https://www.facebook.com/VirkadeVasen" target="_blank">
+              {" "}
+              Virkade Väsen
+            </a>
+            . Jag uppdaterar löpande med datum, platser och all information du
             behöver för att träffa mina väsen live!
           </p>
           <p>
@@ -38,8 +41,19 @@ function VasenPaVift() {
             jag tar alltid emot beställningar via mail eller Facebook.
           </p>
           <p>Följ oss på Facebook och låt mina väsen förgylla din dag!</p>
+          <a
+            className="button"
+            href="https://www.facebook.com/VirkadeVasen"
+            target="_blank"
+          >
+            Facebook Virkade Väsen
+          </a>
         </div>
-        <img id="imgToText" src={market} alt="market" />
+        <img
+          id="marketImg"
+          src={market}
+          alt="Virkade Väsen uppställda på marknadsstånd"
+        />
       </div>
       <Footer />
     </div>
