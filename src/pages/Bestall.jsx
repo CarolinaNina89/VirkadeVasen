@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet";
 import Heading from "../components/Heading";
 import Footer from "../components/Footer";
 import availableColors from "../availableColors";
-import magicalCreature from "../../public/assets/magicalCreature.png";
 
 // Loops through all colors and puts a , between them
 const [yarn, eyes] = availableColors;

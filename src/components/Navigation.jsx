@@ -1,17 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import facebook from "../../public/assets/facebook.png";
 
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleClickOutside = (e) => {
+    if (menuRef.current && !menuRef.current.contains(e.target)) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    // add eventlistener for click
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      // remove eventlistener
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <div className="naviframe">
-      <div className="naviContent">
+      <div className="naviContent" ref={menuRef}>
         <div className="logoDiv">
           <Link to="/">
             <h1>Virkade Väsen</h1>

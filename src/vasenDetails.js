@@ -24,8 +24,6 @@ const vasenDetails = [
     eyecolor: "Gröna",
     stuffing: "Bomull",
     extra: "Barnsäkra ögon",
-    story:
-      "Jag föddes en gnistrande vinternatt, skapad av magiska händer som virkade mig med kärlek. Nu söker jag ett hem där jag kan sprida julglädje, värme och kanske hitta på några bus! ",
     category: ["Jul"],
   },
   {
@@ -40,8 +38,6 @@ const vasenDetails = [
     eyecolor: "Gröna",
     stuffing: "Bomull",
     extra: "Barnsäkra ögon",
-    story:
-      "Jag är en liten axolotl som föddes ur mjuka maskor och drömmar om havet. Jag har rest från klara bäckar och steniga stränder. Nu hoppas jag få bli din vän och skapa minnen tillsammans.",
   },
   {
     key: "saga",
@@ -55,8 +51,6 @@ const vasenDetails = [
     eyecolor: "Blåa",
     stuffing: "Bomull",
     extra: "Barnsäkra ögon",
-    story:
-      "Jag är en liten drake född ur magiska maskor. Med mjuka fjäll och äventyrslust vill jag sprida värme, glädje och skapa fantastiska sagor tillsammans med dig. Är du redo? ",
   },
   {
     key: "missy",
@@ -70,8 +64,6 @@ const vasenDetails = [
     eyecolor: "Gröna",
     stuffing: "Bomull",
     extra: "Barnsäkra ögon",
-    story:
-      "Jag är en liten goblin från skogens hjärta. Med min äventyrsväska och nyfikenhet älskar jag att utforska världen och sprida busig glädje. Vart leder vårt första äventry?",
   },
   {
     key: "bubb",
@@ -85,8 +77,6 @@ const vasenDetails = [
     eyecolor: "Lila",
     stuffing: "Bomull",
     extra: "Barnsäkra ögon",
-    story:
-      " Jag är en liten sköldpadda med en jordgubbshatt på ryggen! Jag älskar allt som är somrigt – doften av blommor, solens värme och små äventyr i gräset.",
   },
   {
     key: "deadly",
@@ -100,8 +90,6 @@ const vasenDetails = [
     eyecolor: "Svarta",
     stuffing: "Bomull",
     extra: "Barnsäkra ögon",
-    story:
-      "Jag är en liten svamp med mystiska krafter och en busig blick. Med min hatt och hemlighetsfulla charm älskar jag att smyga runt i skogen och hitta på små trollkonster.",
   },
   {
     key: "spike",
@@ -115,8 +103,6 @@ const vasenDetails = [
     eyecolor: "Gröna",
     stuffing: "Bomull",
     extra: "Barnsäkra ögon",
-    story:
-      "Jag är en liten svart katt med mjuk päls och nyfikna ögon. Jag älskar att tassa runt, upptäcka nya platser och ibland mysa i din famn. Är du redo för en liten, lojal vän? ",
   },
   {
     key: "cleo",
@@ -130,8 +116,6 @@ const vasenDetails = [
     eyecolor: "Gröna",
     stuffing: "Bomull",
     extra: "Barnsäkra ögon",
-    story:
-      "Jag är en stor och gosig sköldpadda med mjuk sköld. Med ett lugnt sinne och ett vänligt hjärta älskar jag att utforska världen sakta men säkert. Vill du dela äventyret med mig? ",
   },
   {
     key: "burt",
@@ -145,8 +129,6 @@ const vasenDetails = [
     eyecolor: "Blåa",
     stuffing: "Bomull",
     extra: "Barnsäkra ögon",
-    story:
-      "Jag är en magisk svamp med en tokig hatt och ett hjärta fyllt av äventyr. Jag älskar att utforska skogen, upptäcka hemligheter och dela magiska stunder med nya vänner. Vill du följa med?",
   },
   {
     key: "rio",
@@ -160,8 +142,6 @@ const vasenDetails = [
     eyecolor: "Lila",
     stuffing: "Bomull",
     extra: "Barnsäkra ögon",
-    story:
-      "Jag är en mjuk enhörning med regnbågsman och gnistrande horn. Jag älskar att sprida magi, glädje och tron på det omöjliga. Vill du ta med mig på äventyr och drömmarnas resa? ",
   },
   {
     key: "hugo",
@@ -175,8 +155,6 @@ const vasenDetails = [
     eyecolor: "Lila",
     stuffing: "Bomull",
     extra: "Barnsäkra ögon",
-    story:
-      "Jag är en liten larv som älskar att utforska trädgården och rulla runt bland löven. Med mina glada färger vill jag sprida leenden och upptäcka världen tillsammans med dig. ",
   },
   {
     key: "star",
@@ -190,8 +168,6 @@ const vasenDetails = [
     eyecolor: "Lila",
     stuffing: "Bomull",
     extra: "Barnsäkra ögon",
-    story:
-      "Jag är en liten enhörning skapad för att sprida magi och glädje. Med mitt glittrande horn och färgglada man älskar jag att skapa små underverk. Vill du bli min vän och upptäcka magin tillsammans? ",
   },
 ];
 

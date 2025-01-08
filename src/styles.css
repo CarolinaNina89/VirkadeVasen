@@ -301,6 +301,29 @@ h6 {
   width: 95%;
 }
 
+.searchDiv {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.searchInput {
+  border: 2px solid var(--darkergrey);
+  background-color: var(--softWhite);
+  padding: 2% 5% 2% 2%;
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid var(--darkergrey);
+  background-color: var(--softWhite);
+  box-shadow: 0 0 10px rgb(255, 144, 179, 0.7);
+}
+
+.noMatches {
+  text-align: center;
+}
 /* /////////////////////////////////////////// VÄSEN CARD */
 
 .vasen {
@@ -374,6 +397,7 @@ h6 {
   border-radius: 0% 10%;
   border: 1px solid #d1d1d1;
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .vasenStory {
@@ -458,6 +482,48 @@ h6 {
   color: var(--primaryGreen);
   font-size: 0.9rem;
   letter-spacing: 0.04em;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 5%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+}
+.modal.open {
+  display: block;
+}
+.modal-content {
+  margin: auto;
+  text-align: center;
+}
+#biggerImage {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-image {
+  display: inline-block;
+}
+
+/* The Close Button */
+.close {
+  color: var(--softWhite);
+  display: block;
+  font-size: 4rem;
+}
+
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* /////////////////////////////////////////// VÄSEN PÅ VIFT & BESTÄLL */

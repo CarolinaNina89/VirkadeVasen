@@ -1,13 +1,15 @@
-import React from "react";
-import Button from "../components/Button";
+import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
+import Button from "../components/Button";
 import arrowBack from "../../public/assets/arrow-back.png";
 import vasenDetails from "../vasenDetails";
 import Footer from "../components/Footer";
-import { Helmet } from "react-helmet";
 
 function VasenDetails() {
   const { id } = useParams();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImageSrc, setModalImageSrc] = useState("");
 
   if (!vasenDetails || vasenDetails.length === 0) {
     return <p>Data om väsen är inte tillgänglig!</p>;
@@ -18,6 +20,16 @@ function VasenDetails() {
   if (!vasen) {
     return <p>Väsen hittades inte!</p>;
   }
+
+  const handleImageClick = (src) => {
+    setModalImageSrc(src);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setModalImageSrc("");
+  };
 
   const currentIndex = vasenDetails.findIndex((v) => v.id === id);
   const previousIndex =
@@ -33,7 +45,7 @@ function VasenDetails() {
       <Helmet>
         <meta
           name="description"
-          content={`Upptäck ${vasen.name}! Ett handgjort virkat väsen med unika detaljer och magisk charm. Läs mer om dess egenskaper, historia och varför hen är perfekt för dig eller som present.`}
+          content={`Upptäck virkade ${vasen.name}! Ett handgjort virkat väsen med unika detaljer och magisk charm. Läs mer om dess egenskaper och varför hen är perfekt för dig eller som present.`}
         />
         <title>VirkadeVasen - {vasen.name}</title>
       </Helmet>
@@ -46,17 +58,38 @@ function VasenDetails() {
 
       <div className="vasenPresentationDiv">
         {/* Picture of Väsen */}
+        {/* MODAL */}
+        {isModalOpen && (
+          <div id="modalBiggerImg" className="modal open" onClick={closeModal}>
+            <div
+              className="modal-content"
+              onClick={(e) => {
+                e.stopPropagation();
+                closeModal();
+              }}
+            >
+              <span className="close" onClick={closeModal}>
+                &times;
+              </span>
+              <img
+                src={modalImageSrc}
+                id="biggerImage"
+                alt="Bigger view of the picture"
+              />
+            </div>
+          </div>
+        )}
         <img
           className="imgVasenDetails"
           src={vasen.imgURL}
-          alt={`Bild av det virkade väsendet ${vasen.name}`}
+          alt={`Bild av det virkade väsenet ${vasen.name}`}
+          onClick={() => handleImageClick(vasen.imgURL)}
         />
         <div className="VasenDetailsDiv">
           <div className="headingVasenDetailsDiv">
             <h5>{vasen.heading}</h5>
             <p className="vasenDetailPrice">{vasen.price}</p>
           </div>
-          {/* <p className="vasenStory">"{vasen.story}"</p> */}
           <div className="vasenQualities">
             <h4 className="vasenQualitiesHeading">Detaljer</h4>
             {/* List of qualities */}
