@@ -21,7 +21,9 @@ function VasenPaVift() {
       />
       <div className="textWithImgLayout">
         <div className="longTexts">
-          <p>Mina virkade väsen älskar att ge sig ut på äventyr! </p>
+          <p className="highlighted">
+            Mina virkade väsen älskar att ge sig ut på äventyr!
+          </p>
           <p>
             Håll utkik efter oss på marknader och evenemang på Hönö med omnejd,
             där du kan klämma, känna och förälska dig i mina magiska handgjorda
