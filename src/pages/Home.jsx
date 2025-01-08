@@ -4,11 +4,7 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Heading from "../components/Heading";
 import { Helmet } from "react-helmet";
-import frans from "../../public/assets/axolotlFrans.jpg";
-import rio from "../../public/assets/enhörningRio.jpg";
-import deadly from "../../public/assets/svampenDeadly.jpg";
-import saga from "../../public/assets/babyDragon.jpg";
-import spike from "../../public/assets/kattenSpike.jpg";
+import TwistedImages from "../components/RandomImages";
 
 function Home() {
   return (
@@ -35,7 +31,8 @@ function Home() {
           <Button text="Här hittar du alla mina väsen" />
         </Link>
         <div className="twistedImagesDiv">
-          <Link to="/vasen/frans">
+          <TwistedImages />
+          {/* <Link to="/vasen/frans">
             <img id="firstImg" src={frans} alt="Axolotl Frans" />
           </Link>
           <Link to="/vasen/rio">
@@ -49,7 +46,7 @@ function Home() {
           </Link>
           <Link to="/vasen/spike">
             <img id="fifthImg" src={spike} alt="Katten Spike" />
-          </Link>
+          </Link> */}
         </div>
       </div>
       <Footer />

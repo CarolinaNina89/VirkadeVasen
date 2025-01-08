@@ -261,7 +261,7 @@ h6 {
   display: flex;
   align-items: center;
   width: 100%;
-  margin: 10% 0 0 0;
+  margin: 5% 0 0 0;
 }
 
 .twistedImagesDiv img {
@@ -306,11 +306,12 @@ h6 {
   justify-content: center;
   width: 100%;
 }
+
 .searchInput {
   border: 2px solid var(--darkergrey);
   background-color: var(--softWhite);
   padding: 2% 5% 2% 2%;
-  width: 100%;
+  width: 40ch;
   margin-bottom: 10%;
 }
 
@@ -318,7 +319,12 @@ input:focus {
   outline: none;
   border: 2px solid var(--darkergrey);
   background-color: var(--softWhite);
-  box-shadow: 0 0 10px rgb(255, 144, 179, 0.7);
+  box-shadow: 0 0 10px rgb(255, 144, 179, 0.5);
+}
+
+input::placeholder {
+  color: var(--primaryGreen);
+  opacity: 0.6;
 }
 
 .noMatches {

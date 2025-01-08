@@ -12,7 +12,9 @@ function AllaVasen() {
   const handleSearch = (query) => {
     const lowerCaseQuery = query.toLowerCase();
     const filtered = vasenDetails.filter((vasen) =>
-      vasen.heading.toLowerCase().includes(lowerCaseQuery)
+      Object.values(vasen).some((value) =>
+        String(value).toLowerCase().includes(lowerCaseQuery)
+      )
     );
     setFilteredVasen(filtered);
   };

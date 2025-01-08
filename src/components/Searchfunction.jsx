@@ -16,7 +16,7 @@ function Search({ items, onSearch }) {
       {/* Searchfield */}
       <input
         type="text"
-        placeholder="Sök efter väsen här..."
+        placeholder="Sök på t.ex. namn, färg, typ eller storlek..."
         value={searchQuery}
         onChange={handleSearch}
         className="searchInput"
