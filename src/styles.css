@@ -261,34 +261,19 @@ h6 {
   display: flex;
   align-items: center;
   width: 100%;
-  margin: 5% 0 0 0;
+  margin: 4% 0 0 0;
 }
 
 .twistedImagesDiv img {
+  transition: transform 0.4s;
   width: 90%;
   margin-left: 5%;
-  /* box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5); */
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
 }
 .twistedImagesDiv img:hover {
   transform: scale(1.1);
   border: 1px solid var(--darkergrey);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-
-#firstImg {
-  rotate: -12deg;
-}
-#secondImg {
-  rotate: 12deg;
-}
-#thirdImg {
-  rotate: -5deg;
-}
-#fourthImg {
-  rotate: -12deg;
-}
-#fifthImg {
-  rotate: 12deg;
 }
 
 /* /////////////////////////////////////////// ALLA VÄSEN */
@@ -771,7 +756,8 @@ Användning: Anpassningar för mindre telefoner som iPhone SE eller liknande.*/
   }
   /* ////////// Home */
   .twistedImagesDiv {
-    width: 80%;
+    width: 90%;
+    justify-content: center;
   }
   /* ////////// Alla väsen */
   .listVasen {
@@ -949,7 +935,8 @@ Användning: För större telefoner och mindre surfplattor i porträttläge.*/
   }
   /* ////////// Home */
   .twistedImagesDiv {
-    width: 80%;
+    justify-content: center;
+    width: 90%;
   }
   /* ////////// Väsen details */
   .arrowBackToAllVasen {

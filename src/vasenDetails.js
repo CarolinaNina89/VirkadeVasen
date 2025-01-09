@@ -38,6 +38,7 @@ const vasenDetails = [
     eyecolor: "Gröna",
     stuffing: "Bomull",
     extra: "Barnsäkra ögon",
+    category: "",
   },
   {
     key: "saga",
@@ -51,6 +52,7 @@ const vasenDetails = [
     eyecolor: "Blåa",
     stuffing: "Bomull",
     extra: "Barnsäkra ögon",
+    category: "",
   },
   {
     key: "missy",
@@ -64,6 +66,7 @@ const vasenDetails = [
     eyecolor: "Gröna",
     stuffing: "Bomull",
     extra: "Barnsäkra ögon",
+    category: "liten",
   },
   {
     key: "bubb",
@@ -105,7 +108,7 @@ const vasenDetails = [
     eyecolor: "Gröna",
     stuffing: "Bomull",
     extra: "Barnsäkra ögon",
-    category: "Halloween",
+    category: ["Halloween", "liten"],
   },
   {
     key: "cleo",
@@ -114,11 +117,12 @@ const vasenDetails = [
     name: "Cleo",
     imgURL: sköldpaddaCleo,
     price: "250 sek",
-    size: ["40cm", "stor"],
+    size: "40cm",
     yarn: "Vit / Grön",
     eyecolor: "Gröna",
     stuffing: "Bomull",
     extra: "Barnsäkra ögon",
+    category: "Stor",
   },
   {
     key: "burt",
@@ -132,6 +136,7 @@ const vasenDetails = [
     eyecolor: "Blåa",
     stuffing: "Bomull",
     extra: "Barnsäkra ögon",
+    category: "",
   },
   {
     key: "rio",
@@ -140,11 +145,12 @@ const vasenDetails = [
     name: "Rio",
     imgURL: enhörningRio,
     price: "200 sek",
-    size: ["30cm", "stor"],
+    size: "30cm",
     yarn: "Vit / Flerfärgad",
     eyecolor: "Lila",
     stuffing: "Bomull",
     extra: "Barnsäkra ögon",
+    category: "Stor",
   },
   {
     key: "hugo",
@@ -158,6 +164,7 @@ const vasenDetails = [
     eyecolor: "Lila",
     stuffing: "Bomull",
     extra: "Barnsäkra ögon",
+    category: "liten",
   },
   {
     key: "star",
@@ -171,6 +178,7 @@ const vasenDetails = [
     eyecolor: "Lila",
     stuffing: "Bomull",
     extra: "Barnsäkra ögon",
+    category: "",
   },
 ];
 

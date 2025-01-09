@@ -11,8 +11,13 @@ function Search({ items, onSearch }) {
     }
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent standard form send
+    document.activeElement.blur(); //Minimize the keyboard
+  };
+
   return (
-    <div>
+    <form onSubmit={handleSubmit}>
       {/* Searchfield */}
       <input
         type="text"
@@ -21,7 +26,7 @@ function Search({ items, onSearch }) {
         onChange={handleSearch}
         className="searchInput"
       />
-    </div>
+    </form>
   );
 }
 export default Search;

@@ -32,21 +32,6 @@ function Home() {
         </Link>
         <div className="twistedImagesDiv">
           <TwistedImages />
-          {/* <Link to="/vasen/frans">
-            <img id="firstImg" src={frans} alt="Axolotl Frans" />
-          </Link>
-          <Link to="/vasen/rio">
-            <img id="secondImg" src={rio} alt="Enhörningen Rio" />
-          </Link>
-          <Link to="/vasen/deadly">
-            <img id="thirdImg" src={deadly} alt="Svampen Deadly" />
-          </Link>
-          <Link to="/vasen/saga">
-            <img id="fourthImg" src={saga} alt="Draken Saga" />
-          </Link>
-          <Link to="/vasen/spike">
-            <img id="fifthImg" src={spike} alt="Katten Spike" />
-          </Link> */}
         </div>
       </div>
       <Footer />

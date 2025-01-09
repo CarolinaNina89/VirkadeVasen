@@ -7,7 +7,7 @@ function TwistedImages() {
     .sort(() => Math.random() - 0.5)
     .slice(0, 5);
 
-  const rotations = ["-12deg", "12deg", "-5deg", "-12deg", "12deg"];
+  const rotations = ["-12deg", "12deg", "0deg", "-12deg", "12deg"];
 
   return (
     <div className="twistedImagesDiv">
